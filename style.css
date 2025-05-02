@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #111;
+    color: white;
+  }
+  
+  .slot-machine {
+    margin-top: 100px;
+  }
+  
+  .reels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .reel {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .result-text {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .result-text.win {
+    color: gold;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  .result-text.lose {
+    color: red;
+    opacity: 1;
+  }
+  
