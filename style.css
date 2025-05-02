@@ -1,63 +1,65 @@
 body {
-    font-family: sans-serif;
-    text-align: center;
-    background: #111;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .slot-machine {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
-  .reels {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .reel {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid white;
-    border-radius: 10px;
-    transition: transform 0.3s;
-  }
-  
-  button {
-    padding: 12px 25px;
-    font-size: 20px;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .result-text {
-    margin-top: 30px;
-    font-size: 28px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  
-  .result-text.win {
-    color: gold;
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  
-  .result-text.lose {
-    color: red;
-    opacity: 1;
-  }
-  
+  font-family: sans-serif;
+  text-align: center;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.slot-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.reels {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  min-width: 360px; /* минимум 3x120 + отступы */
+  overflow-x: auto;
+}
+
+.reel {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  flex-shrink: 0; /* не сжимать */
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.result-text {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.result-text.win {
+  color: gold;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.result-text.lose {
+  color: red;
+  opacity: 1;
+}
