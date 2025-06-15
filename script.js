@@ -22,7 +22,7 @@ function spin() {
 
   // Проверка на выигрыш
   if (results[0] === results[1] && results[1] === results[2]) {
-    result.textContent = 'Занос! У бобрихи спид!';
+    result.textContent = 'Занос!';
     result.className = 'result-text win';
   } else {
     result.textContent = 'Попробуй снова!';
